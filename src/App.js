@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import SplashPage from './pages/SplashPage'
-import ErrorPage404 from './pages/ErrorPage404'
-import Miniatures from './pages/Miniatures'
-import Pandas from './pages/Pandas'
+import CategoryPage from './pages/CategoryPage'
+import PhotoList from './pages/PhotoList'
 
 // Finally, we render a <Router> with some <Route>s.
 // It does all the fancy routing stuff for us.
@@ -14,10 +12,8 @@ class App extends Component {
       <>
         <Router>
           <Switch>
-            <Route exact path="/" component={SplashPage} />
-            <Route exact path="/Pandas" component={Pandas} />
-            <Route exact path="/mini" component={Miniatures} />
-            <Route component={ErrorPage404} />
+            <Route exact path="/" component={CategoryPage} />
+            <Route exact path="/:hobby" component={PhotoList} />
           </Switch>
         </Router>
       </>
