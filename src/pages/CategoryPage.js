@@ -12,7 +12,7 @@ class CategoryList extends Component {
             <h2>A Photo gallery by Jason Perry</h2>
           </header>
         </main>
-        <section>🏡Home</section>
+        <section>Home</section>
         <section className="hobbies">
           {Object.keys(hobbies).map((hobby, i) => {
             console.log('the hobby' + hobby)
